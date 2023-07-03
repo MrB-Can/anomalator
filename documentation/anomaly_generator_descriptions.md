@@ -1,7 +1,7 @@
 # Anomaly Generator Descriptions
 
 ## Introduction
-The following document provides descriptions for various types of anomalies that can be generated using a generative AI. Each anomaly corresponds to a specific data quality dimension and provides instructions for creating anomaly generators to simulate and inject anomalies into datasets. These anomaly generators can assist in testing data quality tools and simulating anomalous conditions for system behavior analysis.
+The following document provides descriptions for various types of anomalies that can be generated. Each anomaly corresponds to a specific data quality dimension and provides instructions for creating anomaly generators to simulate and inject anomalies into datasets. These anomaly generators can assist in testing data quality tools and simulating anomalous conditions for system behavior analysis.
 
 ## Sudden Drop in Data
 This anomaly refers to a sudden lack of incoming data. For example, if you are collecting data every minute and suddenly you stop receiving data for an hour. This could be caused by various issues like network problems, issues with the data provider, or bugs in your data collection code.
@@ -108,7 +108,7 @@ This anomaly refers to inconsistencies in text field formatting, such as a mix o
 
 ---
 
-These descriptions provide guidance for creating anomaly generators to simulate and inject various anomalies into datasets. By following the instructions for each anomaly, a generative AI can be trained to create anomaly generators that facilitate data quality testing and analysis of system behavior under anomalous conditions.
+These descriptions provide guidance for creating anomaly generators to simulate and inject various anomalies into datasets. By following the instructions for each anomaly, we can create anomaly generators that facilitate data quality testing and analysis of system behavior under anomalous conditions.
 
 # Additional Anomalies List
 

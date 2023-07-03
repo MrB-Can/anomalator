@@ -92,3 +92,17 @@ The design constraints for the Anomaly Generator software are as follows:
 ### Open to Collaboration and Decision-Making
 - Collaboration and joint decision-making among the development team and stakeholders are encouraged to ensure the software meets the desired objectives and fulfills customer requirements.
 
+## 8. Technology Stack
+The Anomaly Generator software will be developed using the following technology stack:
+
+### Back-end Development
+The main server-side logic will be written in Python, leveraging the Flask framework. This choice takes advantage of the developer's proficiency in Python, the language's suitability for data-related tasks, and the Flask's ease of use.
+### Front-end Development
+JavaScript, along with the React.js library, will be utilized for the client-side interface. This setup allows for scalable and interactive user interfaces, and JavaScript's ubiquity and extensive online resources make it a good choice for easy learning and further skill development.
+### Database Management
+PostgreSQL will serve as the primary database system due to the developer's comfort with it and its ability to handle a wide range of data types and large data sets.
+### DevOps
+Docker will be used for containerization to ensure the application and its environment can be easily set up on any system. This supports consistency in development, testing, and deployment phases.
+### Data Storage and Transfer
+For structured data handling, CSV and Excel file formats will be predominantly used. Given the developer's familiarity and the broad support these formats enjoy across different languages and libraries, they are a fitting choice.
+Please note that the choice of technology stack is subject to review and adjustment as the project evolves, to ensure it remains aligned with project needs and developer skills.
