@@ -3,6 +3,24 @@
 ## Introduction
 The following document provides descriptions for various types of anomalies that can be generated using a generative AI. Each anomaly corresponds to a specific data quality dimension and provides instructions for creating anomaly generators to simulate and inject anomalies into datasets. These anomaly generators can assist in testing data quality tools and simulating anomalous conditions for system behavior analysis.
 
+## Sudden Drop in Data
+This anomaly refers to a sudden lack of incoming data. For example, if you are collecting data every minute and suddenly you stop receiving data for an hour. This could be caused by various issues like network problems, issues with the data provider, or bugs in your data collection code.
+
+## Unexpected Increase in Data Volume
+This anomaly refers to a sudden surge in the volume of incoming data, which could potentially overwhelm your systems or lead to increased processing times. It could be caused by issues like errors in data generation or changes in user behavior.
+
+## Unusual Distribution Shifts
+This anomaly refers to when the distribution of a variable significantly shifts. For example, a variable that is usually normally distributed suddenly becomes heavily skewed.
+
+## Inconsistencies in Data Associations
+This anomaly refers to when the usual correlation or association between two or more variables changes suddenly. For example, if two variables are usually strongly correlated, and suddenly this correlation weakens or disappears.
+
+## Changes in Data Trend
+This anomaly refers to an unexpected change in the trend of a variable. For example, a variable that was steadily increasing suddenly starts decreasing.
+
+## Inconsistent Capitalization or Formatting in Text Fields
+This anomaly refers to inconsistencies in text field formatting, such as a mix of uppercase and lowercase entries, a mix of abbreviated and full versions of the same word, etc.
+
 ## Missing Values (null) in a Column
 **Description:** This anomaly involves introducing missing values (null) in a specific column of a dataset. The generated anomaly generator should target a chosen column and replace a certain percentage of its values with null.
 
