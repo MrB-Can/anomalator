@@ -27,6 +27,26 @@ The components interact as follows:
 - The User Interface provides feedback on the injection process and displays any relevant information or error messages.
 
 The architecture follows a modular approach, allowing for flexibility and extensibility in incorporating new anomaly types, database connectors, or user interface enhancements. It leverages the principle of separation of concerns to ensure clear responsibilities and maintainability.
+## Database Abstraction Layer
+
+Recognizing the need to support multiple database systems with distinct SQL dialects, a Database Abstraction Layer (DAL) is introduced into the system architecture. This component abstracts the nuances and differences in SQL syntax across various databases, allowing the Anomaly Generator software to interact uniformly with any supported database system.
+
+The DAL acts as a translation layer between the generic database commands issued by the software and the specific commands supported by the target database. This allows the software to be written in a database-agnostic way, significantly improving maintainability and extensibility.
+
+The areas that the DAL addresses include:
+
+- **Data Types**: The layer maps equivalent data types across different databases, catering to specificities in how each database handles different kinds of data.
+- **Functions**: The DAL provides translations for different SQL functions across databases, ensuring seamless interaction irrespective of the underlying database system.
+- **Subqueries and Joins**: It abstracts the differences in handling subqueries and joins across different databases.
+- **Full-Text Search**: The layer handles variations in full-text search capabilities and syntax across databases.
+- **Indexing and Constraints**: It provides consistent handling of indexing and constraints, abstracting away the syntax differences.
+- **Stored Procedures and Triggers**: If applicable, the DAL will handle the differences in creating and calling stored procedures and triggers.
+- **Paging and Limiting Result Sets**: The layer abstracts the differing ways databases limit results returned by a query.
+- **Error Handling**: The DAL provides a uniform interface for error handling, capturing and translating database-specific error messages into a generic format that the software can interpret and respond to consistently.
+
+To implement the DAL, the design and development process will involve identifying the commonalities and differences among the target databases, defining the interface and behavior of the DAL, implementing the database-specific code, and rigorously testing the layer with each of the target databases.
+
+This approach allows the Anomaly Generator to support a wide range of database systems without requiring substantial modifications to the core anomaly generation and injection components, thus ensuring broad usability while preserving maintainability.
 
 ## Data Flows and Interactions
 
