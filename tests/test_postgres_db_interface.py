@@ -162,6 +162,7 @@ def test_database_profiling():
     """
     Test if we can profile the database.
     """
+    print('\n')
     db_interface = PostgresDBInterface(
         os.getenv('DB_USERNAME'),
         os.getenv('DB_PASSWORD'),
@@ -175,9 +176,9 @@ def test_database_profiling():
     # Databases table
     db_table = PrettyTable()
     db_table.field_names = ["Database", "Character Encoding", "Collation"]
-    for database in db_profile:
-        profile_data = db_profile[database]
-        db_table.add_row([database, profile_data.get('character_encoding', ''), profile_data.get('collation', '')])
+    for database, data in db_profile.items():  # Iterate over key-value pairs in db_profile
+        db_table.add_row([database, data["character_encoding"], data["collation"]])
+
 
     # Schemas table
     schema_table = PrettyTable()
